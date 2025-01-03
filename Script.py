@@ -4,14 +4,14 @@
 
 
 class script(object):
-    START_TXT = """<b>Hᴇʟʟᴏ {},ᴍʏ ɴᴀᴍᴇ {},【ɪ ᴀᴍ ᴅᴇsɪʀᴇᴘᴏᴍ ʙᴏᴛ 👙 】ɪ ᴄᴀɴ ғᴜʟʟғɪʟʟ ʏᴏᴜʀ ᴘ*ʀɴ ᴅᴇsɪʀᴇ 🥵</b>"""
+    START_TXT = """<b>Hᴇʟʟᴏ {}. ɪ ᴀᴍ {}👙, ɪ ᴄᴀɴ ғᴜʟʟғɪʟʟ ʏᴏᴜʀ ᴘ*ʀɴ ᴅᴇsɪʀᴇ 🥵</b>"""
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
     
-    CAPTION = """<b>📂 ғɪʟᴇɴᴀᴍᴇ : {@DesireDiveBackup}
+    CAPTION = """<b>📂 ғɪʟᴇɴᴀᴍᴇ : {}
 
 sɪᴢᴇ ⚙️: {file_size}
 
