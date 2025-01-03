@@ -374,27 +374,27 @@ async def base_site_handler(client, m: Message):
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-@Client.on_callback_query()
-async def cb_handler(client: Client, query: CallbackQuery):
-    if query.data == "close_data":
-        await query.message.delete()
-    elif query.data == "about":
-        buttons = [[
-            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
-        ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        me2 = (await client.get_me()).mention
-        await query.message.edit_text(
-            text=script.ABOUT_TXT.format(me2),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+# @Client.on_callback_query()
+# async def cb_handler(client: Client, query: CallbackQuery):
+#     if query.data == "close_data":
+#         await query.message.delete()
+#     elif query.data == "about":
+#         buttons = [[
+#             InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
+#             InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
+#         ]]
+#         await client.edit_message_media(
+#             query.message.chat.id, 
+#             query.message.id, 
+#             InputMediaPhoto(random.choice(PICS))
+#         )
+#         reply_markup = InlineKeyboardMarkup(buttons)
+#         me2 = (await client.get_me()).mention
+#         await query.message.edit_text(
+#             text=script.ABOUT_TXT.format(me2),
+#             reply_markup=reply_markup,
+#             parse_mode=enums.ParseMode.HTML
+#         )
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
