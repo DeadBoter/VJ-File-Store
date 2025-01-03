@@ -99,7 +99,7 @@ async def start(client, message):
                 except:
                     return
             await msg.edit_caption(f_caption)
-            k = await msg.reply(f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b>🍑 ɪᴍᴘᴏʀᴛᴀɴᴛ 🍑</b>\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳.\n\nsᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩.")
             await asyncio.sleep(AUTO_DELETE_TIME)
             await msg.delete()
             await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
