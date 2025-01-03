@@ -54,11 +54,11 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('👙 ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ', url='https://t.me/DesireDriveBackup')
+            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
             ]]
-        if CLONE_MODE == False:
-            # buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
-        # reply_markup = InlineKeyboardMarkup(buttons)
+        if CLONE_MODE == True:
+            buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
+        reply_markup = InlineKeyboardMarkup(buttons)
         me2 = (await client.get_me()).mention
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -197,14 +197,14 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         if AUTO_DELETE_MODE == True:
-            k = await client.send_message(chat_id = message.from_user.id, text=f"<b>🍑 ɪᴍᴘᴏʀᴛᴀɴᴛ 🍑</b>\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳.\n\nsᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩.")
+            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
             await asyncio.sleep(AUTO_DELETE_TIME)
             for x in filesarr:
                 try:
                     await x.delete()
                 except:
                     pass
-            await k.edit_text("ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅")
+            await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return
 
 # Don't Remove Credit Tg - @VJ_Botz
@@ -258,18 +258,18 @@ async def start(client, message):
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b>🍑 ɪᴍᴘᴏʀᴛᴀɴᴛ 🍑</b>\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳.\n\nsᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩.")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
                 except:
                     pass
                 await g.delete()
-                await k.edit_text("ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅")
+                await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
         except:
             pass
-        return await message.reply('ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛs 🍆.')
+        return await message.reply('No such file exist.')
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -374,27 +374,27 @@ async def base_site_handler(client, m: Message):
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-# @Client.on_callback_query()
-# async def cb_handler(client: Client, query: CallbackQuery):
-#     if query.data == "close_data":
-#         await query.message.delete()
-#     elif query.data == "about":
-#         buttons = [[
-#             InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
-#             InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
-#         ]]
-#         await client.edit_message_media(
-#             query.message.chat.id, 
-#             query.message.id, 
-#             InputMediaPhoto(random.choice(PICS))
-#         )
-#         reply_markup = InlineKeyboardMarkup(buttons)
-#         me2 = (await client.get_me()).mention
-#         await query.message.edit_text(
-#             text=script.ABOUT_TXT.format(me2),
-#             reply_markup=reply_markup,
-#             parse_mode=enums.ParseMode.HTML
-#         )
+@Client.on_callback_query()
+async def cb_handler(client: Client, query: CallbackQuery):
+    if query.data == "close_data":
+        await query.message.delete()
+    elif query.data == "about":
+        buttons = [[
+            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        me2 = (await client.get_me()).mention
+        await query.message.edit_text(
+            text=script.ABOUT_TXT.format(me2),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -402,8 +402,16 @@ async def base_site_handler(client, m: Message):
     
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('👙 ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ', url='https://t.me/DesireDriveBackup')
-            ]]
+            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+            ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+            ],[
+            InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')
+            ],[
+            InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
+        ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -422,98 +430,98 @@ async def base_site_handler(client, m: Message):
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
     
-    # elif query.data == "clone":
-    #     buttons = [[
-    #         InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
-    #         InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
-    #     ]]
-    #     await client.edit_message_media(
-    #         query.message.chat.id, 
-    #         query.message.id, 
-    #         InputMediaPhoto(random.choice(PICS))
-    #     )
-    #     reply_markup = InlineKeyboardMarkup(buttons)
-    #     await query.message.edit_text(
-    #         text=script.CLONE_TXT.format(query.from_user.mention),
-    #         reply_markup=reply_markup,
-    #         parse_mode=enums.ParseMode.HTML
-    #     )          
+    elif query.data == "clone":
+        buttons = [[
+            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.CLONE_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )          
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
     
-    # elif query.data == "help":
-    #     buttons = [[
-    #         InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
-    #         InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
-    #     ]]
-    #     await client.edit_message_media(
-    #         query.message.chat.id, 
-    #         query.message.id, 
-    #         InputMediaPhoto(random.choice(PICS))
-    #     )
-    #     reply_markup = InlineKeyboardMarkup(buttons)
-    #     await query.message.edit_text(
-    #         text=script.HELP_TXT,
-    #         reply_markup=reply_markup,
-    #         parse_mode=enums.ParseMode.HTML
-    #     )  
+    elif query.data == "help":
+        buttons = [[
+            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-    # elif query.data.startswith("generate_stream_link"):
-    #     _, file_id = query.data.split(":")
-    #     try:
-    #         user_id = query.from_user.id
-    #         username =  query.from_user.mention 
+    elif query.data.startswith("generate_stream_link"):
+        _, file_id = query.data.split(":")
+        try:
+            user_id = query.from_user.id
+            username =  query.from_user.mention 
 
-    #         log_msg = await client.send_cached_media(
-    #             chat_id=LOG_CHANNEL,
-    #             file_id=file_id,
-    #         )
-    #         fileName = {quote_plus(get_name(log_msg))}
-    #         stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-    #         download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            log_msg = await client.send_cached_media(
+                chat_id=LOG_CHANNEL,
+                file_id=file_id,
+            )
+            fileName = {quote_plus(get_name(log_msg))}
+            stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
-    #         xo = await query.message.reply_text(f'🔐')
-    #         await asyncio.sleep(1)
-    #         await xo.delete()
+            xo = await query.message.reply_text(f'🔐')
+            await asyncio.sleep(1)
+            await xo.delete()
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-            # button = [[
-            #     InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-            #     InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
-            # ]]
-            # reply_markup=InlineKeyboardMarkup(button)
-            # await log_msg.reply_text(
-            #     text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
-            #     quote=True,
-            #     disable_web_page_preview=True,
-            #     reply_markup=reply_markup
-            # )
-        #     button = [[
-        #         InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-        #         InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
-        #     ],[
-        #         InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
-        #     ]]
-        #     reply_markup=InlineKeyboardMarkup(button)
-        #     await query.message.reply_text(
-        #         text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
-        #         quote=True,
-        #         disable_web_page_preview=True,
-        #         reply_markup=reply_markup
-        #     )
-        # except Exception as e:
-        #     print(e)  # print the error message
-        #     await query.answer(f"☣something went wrong\n\n{e}", show_alert=True)
-        #     return
+            button = [[
+                InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
+                InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
+            ]]
+            reply_markup=InlineKeyboardMarkup(button)
+            await log_msg.reply_text(
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=reply_markup
+            )
+            button = [[
+                InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
+                InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
+            ],[
+                InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
+            ]]
+            reply_markup=InlineKeyboardMarkup(button)
+            await query.message.reply_text(
+                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=reply_markup
+            )
+        except Exception as e:
+            print(e)  # print the error message
+            await query.answer(f"☣something went wrong\n\n{e}", show_alert=True)
+            return
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
