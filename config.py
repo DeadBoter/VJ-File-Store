@@ -63,23 +63,23 @@ SHORTLINK_URL = environ.get("SHORTLINK_URL", "") # shortlink domain without http
 SHORTLINK_API = environ.get("SHORTLINK_API", "") # shortlink api
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "") # how to open link 
 
-# Website Info:
-#WEBSITE_URL_MODE = bool(environ.get('WEBSITE_URL_MODE', False)) # Set True or False
+Website Info:
+WEBSITE_URL_MODE = bool(environ.get('WEBSITE_URL_MODE', False)) # Set True or False
 
-# If Website Url Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
-#WEBSITE_URL = environ.get("WEBSITE_URL", "") # For More Information Check Video On Yt - @Tech_VJ
+If Website Url Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
+WEBSITE_URL = environ.get("WEBSITE_URL", "") # For More Information Check Video On Yt - @Tech_VJ
 
-# File Stream Config
-#STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
+File Stream Config
+STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
 
-# If Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
-# MULTI_CLIENT = False
-# SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
-# PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
-# if 'DYNO' in environ:
-   # ON_HEROKU = True
-#else:
-   # ON_HEROKU = False
+If Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
+MULTI_CLIENT = False
+SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
+PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
+if 'DYNO' in environ:
+   ON_HEROKU = True
+else:
+   ON_HEROKU = False
 URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
 
 
