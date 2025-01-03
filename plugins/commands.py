@@ -56,15 +56,15 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('👙 ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ', url='https://t.me/DesireDriveBackup')
             ]]
-        if CLONE_MODE == False:
-            buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
-        reply_markup = InlineKeyboardMarkup(buttons)
-        me2 = (await client.get_me()).mention
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, me2),
-            reply_markup=reply_markup
-        )
+        # if CLONE_MODE == False:
+        #     buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
+        # reply_markup = InlineKeyboardMarkup(buttons)
+        # me2 = (await client.get_me()).mention
+        # await message.reply_photo(
+        #     photo=random.choice(PICS),
+        #     caption=script.START_TXT.format(message.from_user.mention, me2),
+        #     reply_markup=reply_markup
+        # )
         return
 
 # Don't Remove Credit Tg - @VJ_Botz
