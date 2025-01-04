@@ -4,7 +4,7 @@
 
 
 class script(object):
-    START_TXT = """ʜᴇʟʟᴏ, {} ɪ'ᴍ {} 👙, ʜᴇʀᴇ ᴛᴏ ғᴜʟʟғɪʟʟ ʏᴏᴜʀ ᴘᴏᴍ ᴘᴏᴍ ᴅᴇsɪʀᴇ 🥵"""
+    START_TXT = """<b>ʜᴇʟʟᴏ {}, ɪ ᴀᴍ {} ɪ ᴄᴀɴ ғᴜʟʟғɪʟʟ ʏᴏᴜʀ ᴘᴏᴍ ᴘᴏᴍ ᴅᴇsɪʀᴇ 👙</b>"""
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
