@@ -266,7 +266,7 @@ async def start(client, message):
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</b>")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\n<blockquote>ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</blockquote></b>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
@@ -277,7 +277,7 @@ async def start(client, message):
             return
         except:
             pass
-        return await message.reply('<b>ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ ‼️</b>')
+        return await message.reply('<b><blockquote>ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</blockquote></b>')
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -327,7 +327,7 @@ async def start(client, message):
             )
         )
     if AUTO_DELETE_MODE == True:
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\<blockquote>nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</blockquote></b>")
         await asyncio.sleep(AUTO_DELETE_TIME)
         try:
             await x.delete()
