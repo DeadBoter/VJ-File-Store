@@ -266,18 +266,18 @@ async def start(client, message):
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</b>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
                 except:
                     pass
                 await g.delete()
-                await k.edit_text("ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅")
+                await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</b>")
             return
         except:
             pass
-        return await message.reply('ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ 🍆')
+        return await message.reply('<b>ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ 🍆</b>')
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -327,13 +327,13 @@ async def start(client, message):
             )
         )
     if AUTO_DELETE_MODE == True:
-        k = await client.send_message(chat_id = message.from_user.id, text=f"❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\nᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</b>")
         await asyncio.sleep(AUTO_DELETE_TIME)
         try:
             await x.delete()
         except:
             pass
-        await k.edit_text("ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅")       
+        await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</b>")       
         
 
 # Don't Remove Credit Tg - @VJ_Botz
