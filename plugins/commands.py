@@ -137,9 +137,9 @@ async def start(client, message):
             
         filesarr = []
         for msg in msgs:
-            title = msg.get("title")
+            title =  '<b>@DesireDive</b>  ' + msg.get("title")
             size=get_size(int(msg.get("size", 0)))
-            f_caption=msg.get("caption", "@DesireDive")
+            f_caption=msg.get("caption", "")
             if BATCH_FILE_CAPTION:
                 try:
                     f_caption=BATCH_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
