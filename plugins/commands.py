@@ -121,7 +121,7 @@ async def start(client, message):
                 return
         except Exception as e:
             return await message.reply_text(f"**Error - {e}**")
-        sts = await message.reply("**🔺 ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ**")
+        sts = await message.reply("𝖯𝗅𝖾𝖺𝗌𝖾 𝖶𝖺𝗂𝗍...")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -205,14 +205,14 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         if AUTO_DELETE_MODE == True:
-            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
+            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><blockquote>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {AUTO_DELETE} 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝗈 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌.</blockquote></b>")
             await asyncio.sleep(AUTO_DELETE_TIME)
             for x in filesarr:
                 try:
                     await x.delete()
                 except:
                     pass
-            await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
+            await k.edit_text("<b>𝖸𝗈𝗎𝗋 𝖠𝗅𝗅 𝖵𝗂𝖽𝖾𝗈𝗌/𝖥𝗂𝗅𝖾𝗌 𝗂𝗌 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 ✅</b>")
         return
 
 # Don't Remove Credit Tg - @VJ_Botz
@@ -266,18 +266,18 @@ async def start(client, message):
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️👙 ɪᴍᴘᴏʀᴛᴀɴᴛ 👙❗️\n\n<blockquote>ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ {AUTO_DELETE} ᴍɪɴᴜᴛᴇs ⏳, sᴏ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ɪɴ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs 📩</blockquote></b>")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><blockquote>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {AUTO_DELETE} 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝗈 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌.</blockquote></b>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
                 except:
                     pass
                 await g.delete()
-                await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</b>")
+                await k.edit_text("<b>𝖸𝗈𝗎𝗋 𝖵𝗂𝖽𝖾𝗈 𝗈𝗋 𝖥𝗂𝗅𝖾 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 ✅</b>")
             return
         except:
             pass
-        return await message.reply('<b><blockquote>ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</blockquote></b>')
+        return await message.reply('<b><blockquote>𝖸𝗈𝗎𝗋 𝖵𝗂𝖽𝖾𝗈 𝗈𝗋 𝖥𝗂𝗅𝖾 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 ✅</blockquote></b>')
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -333,7 +333,7 @@ async def start(client, message):
             await x.delete()
         except:
             pass
-        await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ/ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</b>")       
+        await k.edit_text("<b>𝖸𝗈𝗎𝗋 𝖵𝗂𝖽𝖾𝗈 𝗈𝗋 𝖥𝗂𝗅𝖾 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 ✅</b>")       
         
 
 # Don't Remove Credit Tg - @VJ_Botz
