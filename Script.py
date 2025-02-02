@@ -13,7 +13,7 @@ class script(object):
     
     CAPTION = """𝖥𝗂𝗅𝖾𝗇𝖺𝗆𝖾 : {file_name}
 
-𝖲𝗂𝗓𝖾 : {file_size}""" 
+<blockquote>𝖲𝗂𝗓𝖾 : {file_size}</blockquote>""" 
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
