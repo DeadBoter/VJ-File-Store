@@ -139,7 +139,7 @@ async def start(client, message):
         for msg in msgs:
             title = msg.get("title")
             size=get_size(int(msg.get("size", 0)))
-            f_caption=msg.get("caption", "")
+            f_caption=msg.get("caption", "@DesireDive")
             if BATCH_FILE_CAPTION:
                 try:
                     f_caption=BATCH_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
@@ -205,7 +205,7 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         if AUTO_DELETE_MODE == True:
-            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><blockquote>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {AUTO_DELETE} 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝗈 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌.</blockquote></b>")
+            k = await client.send_message(chat_id = message.from_user.id, text=f"<blockquote>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {AUTO_DELETE} 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝗈 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌.✅</blockquote>")
             await asyncio.sleep(AUTO_DELETE_TIME)
             for x in filesarr:
                 try:
@@ -242,7 +242,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '@DesireDive  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '<b>@DesireDive</b>  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -266,7 +266,7 @@ async def start(client, message):
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><blockquote>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {AUTO_DELETE} 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝗈 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌.</blockquote></b>")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<blockquote>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {AUTO_DELETE} 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝗈 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌.✅</blockquote>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
